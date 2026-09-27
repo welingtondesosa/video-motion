@@ -1,0 +1,24 @@
+# Roteiro do video: UNICA fonte dos tempos. Depois de editar:
+#   python tools/make_cues.py      (gera cues.json e cues.js)
+# Formato completo no topo de tools/make_cues.py.
+name: demo-4s            # MP4 sai como out/<slug da marca>-<name>.mp4
+duration: 4
+fps: 60
+bpm: 120                 # 1 tempo = 0,5 s; 1 compasso = 2 s
+cover: 3.5               # quadro da capa (s)
+
+scenes:
+  - {id: palavra, bars: [0, 1]}   # 0 a 2 s
+  - {id: logo,    bars: [1, 2]}   # 2 a 4 s
+
+events:                  # so tempos; cada um vira referencia (ex.: "logo_in + beat 1")
+  palavra_in: "beat 1"   # 0,5 s: a palavra entra com mola (pop)
+  logo_in: "bar 1"       # 2,0 s: o logo pousa (impacto brilhante)
+
+words:
+  - {text: "Atende.", at: palavra_in}
+
+data:                    # livre (textos, cores); as cenas leem em CUES.data
+  aviso: "Cenas e nomes ilustrativos"
+
+numeros_ok: []           # numeros liberados no texto (so medidos ou autorizados por escrito)

@@ -1,0 +1,136 @@
+/* Tokens PADRAO do motor. A marca de verdade vem do kit: brand/brand.css (gerado por tools/apply_brand.py)
+   sobrescreve estas variaveis e define as fontes VDisplay (titulos) e VTexto (texto). Quadro 1080x1920. */
+
+:root {
+  --black: #0A0A0A;
+  --g950: #0B2E18;
+  --g900: #0F3D20;
+  --g800: #1A5C2E;
+  --g750: #1B6535;
+  --g700: #226B38;
+  --g600: #2C8247;
+  --g400: #5CCC7F;
+  --l50: #F0FAF4;
+  --l100: #DDF4E6;
+  --l200: #B8EEC8;
+  --grad-logo: linear-gradient(90deg, #0E9788, #1AA88D, #26BC93, #30CD97, #4ED882, #75DE5E, #A0E537);
+  --wa: #25D366;
+  --ig: linear-gradient(135deg, #F0A441, #C94B8F 55%, #8A3FB0);
+  --mail: #4B5563;
+  --red: #E5484D;
+  --ai-bg: #F5F3FF;
+  --ai-border: #DDD6FE;
+  --ai-chip-bg: rgba(139, 92, 246, 0.15);
+  --ai-chip-text: #7C3AED;
+  --human-chip-bg: rgba(239, 68, 68, 0.15);
+  --human-chip-text: #DC2626;
+  --in-border: #E5E5E5;
+  --ink: #111111;
+}
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0;
+  width: 1080px; height: 1920px;
+  overflow: hidden;
+  background: var(--black);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+#stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: var(--black); }
+.layer { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+.abs { position: absolute; }
+
+/* Tipografia */
+.display { font-family: 'VDisplay', sans-serif; font-weight: 900; letter-spacing: -0.045em; line-height: 0.92; font-variant-numeric: tabular-nums; }
+.display-800 { font-family: 'VDisplay', sans-serif; font-weight: 800; letter-spacing: -0.03em; line-height: 0.98; }
+.sans { font-family: 'VTexto', sans-serif; }
+
+/* Celular */
+.phone {
+  position: absolute;
+  border-radius: 96px;
+  background: linear-gradient(160deg, #2a2a2e, #0c0c0e 40%, #1b1b1f);
+  padding: 20px;
+  box-shadow: 0 60px 120px rgba(0,0,0,0.55), inset 0 0 0 3px rgba(255,255,255,0.06);
+}
+.phone .screen {
+  position: relative; width: 100%; height: 100%;
+  border-radius: 78px; overflow: hidden;
+  background: #FFFFFF;
+}
+.phone .notch {
+  position: absolute; left: 50%; top: 22px; width: 190px; height: 50px; margin-left: -95px;
+  border-radius: 30px; background: #050505; z-index: 50;
+}
+.statusbar {
+  position: absolute; left: 0; top: 0; right: 0; height: 96px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 64px 0 70px;
+  font-family: 'VTexto', sans-serif; font-weight: 700; font-size: 38px; color: #111;
+  z-index: 40;
+}
+.statusbar .batt { display: flex; align-items: center; gap: 10px; font-size: 32px; }
+
+/* Cabeçalho de conversa */
+.chathead {
+  position: absolute; left: 0; right: 0; top: 96px; height: 150px;
+  display: flex; align-items: center; gap: 26px; padding: 0 40px;
+  border-bottom: 2px solid #EDEDED; background: #FFFFFF; z-index: 30;
+}
+.avatar {
+  width: 96px; height: 96px; border-radius: 50%; flex: none;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'VTexto', sans-serif; font-weight: 700; font-size: 40px; color: #fff;
+}
+.chathead .who { font-family: 'VTexto', sans-serif; font-weight: 700; font-size: 46px; color: #111; line-height: 1.05; }
+.chathead .sub { font-family: 'VTexto', sans-serif; font-weight: 500; font-size: 30px; color: #6b7280; margin-top: 4px; }
+
+/* Balões */
+.bubble {
+  position: absolute;
+  font-family: 'VTexto', sans-serif; font-weight: 500; font-size: 56px; line-height: 1.16;
+  padding: 24px 32px 20px; border-radius: 40px;
+  max-width: 82%;
+  white-space: nowrap;
+}
+.bubble.in { left: 34px; background: #FFFFFF; color: var(--ink); border: 2px solid var(--in-border); border-bottom-left-radius: 12px; }
+.bubble.out { right: 34px; background: var(--g700); color: #FFFFFF; border-bottom-right-radius: 12px; }
+.bubble.ai { right: 34px; background: var(--ai-bg); color: #1F1235; border: 2px solid var(--ai-border); border-bottom-right-radius: 12px; }
+.bubble .meta { display: flex; justify-content: flex-end; align-items: center; gap: 8px; margin-top: 6px; font-size: 28px; font-weight: 500; opacity: 0.65; }
+.bubble .ticks svg { width: 40px; height: 26px; display: block; }
+
+/* Selos (iguais aos do app: IA atendendo / Pediu atendente) */
+/* 44 px: o selo e o ponto principal de muitas cenas; 32 px some na tela do celular. */
+.chip {
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 10px 26px 10px 18px; border-radius: 999px;
+  font-family: 'VTexto', sans-serif; font-weight: 700; font-size: 44px; white-space: nowrap;
+}
+.chip svg { width: 46px; height: 46px; }
+.chip.ai { background: var(--ai-chip-bg); color: var(--ai-chip-text); }
+.chip.human { background: var(--human-chip-bg); color: var(--human-chip-text); }
+
+/* Notificação (tela escura) */
+.notif {
+  position: absolute; left: 0; width: 100%; height: 150px;
+  border-radius: 44px; background: rgba(38, 38, 42, 0.92);
+  display: flex; align-items: center; gap: 26px; padding: 0 34px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+}
+.notif .ico { width: 88px; height: 88px; flex: none; }
+.notif .txt { flex: 1; min-width: 0; }
+.notif .name { font-family: 'VTexto', sans-serif; font-weight: 700; font-size: 42px; color: #fff; }
+.notif .lines { margin-top: 12px; display: flex; flex-direction: column; gap: 10px; }
+.notif .lines i { display: block; height: 16px; border-radius: 8px; background: rgba(255,255,255,0.28); filter: blur(2px); }
+.notif .when { font-family: 'VTexto', sans-serif; font-weight: 500; font-size: 30px; color: rgba(255,255,255,0.55); align-self: flex-start; margin-top: 34px; }
+
+/* Texto de apoio fixo */
+.disclaimer {
+  /* Aviso legal: legível no celular (44 px ~ 16 pt), dentro da faixa 240 a 310
+     que nenhuma cena ocupa. Story: CUES.data.aviso_y (ex.: 1500) tira da faixa do topo. */
+  position: absolute; left: 0; right: 0; top: 248px; text-align: center;
+  font-family: 'VTexto', sans-serif; font-weight: 600; font-size: 44px; line-height: 1.2; letter-spacing: 0.005em;
+  color: rgba(255,255,255,0.76);
+  text-shadow: 0 2px 12px rgba(0,0,0,0.35);
+}

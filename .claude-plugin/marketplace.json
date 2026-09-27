@@ -1,0 +1,11 @@
+{
+  "name": "video-motion",
+  "owner": { "name": "Welington De Sosa" },
+  "plugins": [
+    {
+      "name": "video-motion",
+      "source": "./",
+      "description": "Vídeos de motion graphics feitos em código para qualquer marca, a partir de um kit de marca."
+    }
+  ]
+}

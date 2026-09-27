@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>video-motion</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="brand/brand.css">
+</head>
+<body>
+  <div id="stage"></div>
+  <!-- Ordem fixa: tempos (gerado por tools/make_cues.py), biblioteca, motor. -->
+  <script src="cues.js"></script>
+  <script src="brand/brand.js"></script>
+  <script src="lib.js"></script>
+  <script src="main.js"></script>
+  <!-- Cenas: um arquivo por cena (ou grupo), cada um chama registerScene/registerLayer.
+       Ordem = empilhamento padrao. Ao criar ou apagar um arquivo em scenes/, atualize esta lista
+       (tools/make_cues.py avisa se esquecer). -->
+  <script src="scenes/00_background.js"></script>
+  <script src="scenes/10_exemplo.js"></script>
+</body>
+</html>

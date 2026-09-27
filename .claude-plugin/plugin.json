@@ -1,0 +1,10 @@
+{
+  "name": "video-motion",
+  "description": "Vídeos de motion graphics feitos em código (anúncios, lançamentos, showcases, stories) para qualquer marca, a partir de um kit de marca: roteiro, cenas, trilha sintetizada e MP4 revisado.",
+  "version": "1.0.0",
+  "author": { "name": "Welington De Sosa" },
+  "homepage": "https://github.com/welingtondesosa/video-motion",
+  "repository": "https://github.com/welingtondesosa/video-motion",
+  "license": "MIT",
+  "keywords": ["video", "motion-graphics", "playwright", "ffmpeg", "marketing", "branding"]
+}

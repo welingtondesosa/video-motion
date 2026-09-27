@@ -1,0 +1,65 @@
+# KIT DE MARCA DE EXEMPLO para a skill video-motion.
+# "Aurora" e uma padaria FICTICIA: nomes, fatos e site sao inventados so para mostrar o formato.
+# Copie esta pasta para <seu projeto>/.claude/video-marca/ e troque tudo pela sua marca.
+# Formato completo: references/kit-de-marca.md
+nombre: Aurora
+slug: aurora                     # prefixo do MP4 (aurora-<name>.mp4)
+sitio: aurora.example
+idioma: pt-BR                    # idioma do texto na tela por padrao
+idiomas: [pt-BR, es, en]
+tagline:
+  pt-BR: "Pão quentinho, na hora certa."
+  es: "Pan calentito, a la hora justa."
+  en: "Warm bread, right on time."
+cta:
+  pt-BR: "Peça pelo site"
+  es: "Pide en la web"
+  en: "Order online"
+
+colores:                         # obrigatorios: primario, tinta, fondo_oscuro, fondo_claro
+  primario: "#E4572E"
+  secundario: "#F3A712"
+  acento: "#F3A712"
+  tinta: "#1B1B1E"
+  fondo_oscuro: "#141216"
+  fondo_oscuro_2: "#241C1E"
+  fondo_claro: "#FBF6EF"
+  fondo_claro_2: "#F3EADF"
+  degradado: ["#E4572E", "#F3A712"]
+
+fuentes:                         # todas SIL Open Font License (licencas em fonts/OFL-*.txt)
+  titulos:
+    familia: Bricolage Grotesque
+    tracking: -0.03em
+    archivos: {"400 800": fonts/BricolageGrotesque.woff2}
+  texto:
+    familia: Inter
+    archivos: {"400 800": fonts/Inter.woff2}
+  editorial:
+    familia: Instrument Serif
+    archivos: {400: fonts/InstrumentSerif.woff2}
+
+logo:
+  icono: assets/icone.svg
+  icono_escala: 1.05
+  separacion: 0.16
+  palabra:
+    texto: aurora
+    peso: 800
+    tracking: -0.03em
+    color_oscuro: "#FBF6EF"
+    color_claro: "#1B1B1E"
+
+reglas:
+  prohibidas: [Padaria Concorrente]          # concorrentes e fornecedores que nunca aparecem na tela
+  permitir_guiones: false                    # true libera travessao e meia-risca no texto do video
+  permitir_emoji: false                      # true libera emoji
+  aviso_encenado:
+    pt-BR: "Cenas e nomes ilustrativos"
+    es: "Escenas y nombres ilustrativos"
+    en: "Illustrative scenes and names"
+  hechos_verificados:                        # so o que a marca afirma publicamente (aqui, inventado)
+    - "Fornada nova toda manhã."
+    - "Pedido pelo site, retirada na loja."
+  cuidado:
+    - "Preço muda por loja: não colocar preço no vídeo."

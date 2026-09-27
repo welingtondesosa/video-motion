@@ -5,9 +5,10 @@ para qualquer marca: anúncios, lançamentos de função, showcases, stories e t
 Você descreve o vídeo e o Claude escreve o roteiro, monta as cenas, sintetiza a trilha e os efeitos,
 renderiza e confere tudo antes de entregar o MP4.
 
-<p align="center"><img src="docs/demo-aurora.gif" width="240" alt="Demo com a marca fictícia Aurora"></p>
+<p align="center"><img src="docs/demo-onesendz-showcase.gif" width="270" alt="Trecho do showcase de 30 s da OneSendz feito com o video-motion"></p>
 
-*Demo de 4 s gerada com o kit de exemplo (padaria fictícia "Aurora"). [MP4 com som](docs/demo-aurora.mp4).*
+*Trecho do showcase de 30 s da [OneSendz](https://onesendz.com), feito inteiro com este motor
+(cenas, trilha e efeitos). [Vídeo completo com som](docs/demo-onesendz-showcase.mp4).*
 
 ## O que ele faz
 
@@ -77,6 +78,11 @@ Cada projeto guarda o seu em `.claude/video-marca/`:
   fonts/         arquivos de fonte locais (.woff2, .ttf, .otf)
   assets/        ícone e logo (svg ou png)
 ```
+
+<p align="center"><img src="docs/demo-aurora.gif" width="180" alt="Demo com a marca fictícia Aurora"></p>
+
+*Demo de 4 s gerada com o kit de exemplo (padaria fictícia "Aurora"): troque o kit e o mesmo motor
+muda cores, fontes e logo. [MP4 com som](docs/demo-aurora.mp4).*
 
 O formato completo está em [`skills/video-motion/references/kit-de-marca.md`](skills/video-motion/references/kit-de-marca.md)
 e um kit pronto em [`skills/video-motion/exemplo-kit/`](skills/video-motion/exemplo-kit/).
